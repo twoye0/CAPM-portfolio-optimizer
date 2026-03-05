@@ -34,9 +34,9 @@ We find portfolio weights that maximize the Sharpe ratio.
 
 where
 
-<img src="https://latex.codecogs.com/svg.image?R_p=w^{\top}R" height="35"/>
+<img src="https://latex.codecogs.com/svg.image?R_p%3Dw%5E%7B%5Ctop%7DR" />
 
-<img src="https://latex.codecogs.com/svg.image?\sigma_p=\sqrt{w^{\top}\Sigma w}" height="40"/>
+<img src="https://latex.codecogs.com/svg.image?%5Csigma_p%3D%5Csqrt%7Bw%5E%7B%5Ctop%7D%5CSigma%20w%7D" />
 
 ---
 
