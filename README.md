@@ -183,7 +183,11 @@ yfinance
 
 ---
 
-# 👨‍💻 Author
+## 👨‍💻 Author
+
+**twoye0**
 
 Financial Mathematics Student  
 Interested in **Quantitative Finance · Mathematical Modeling · Systematic Trading**
+
+GitHub: https://github.com/twoye0
