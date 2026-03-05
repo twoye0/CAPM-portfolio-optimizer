@@ -1,31 +1,34 @@
-# Optimal Portfolio Allocation using CAPM
+# 📊 CAPM Portfolio Optimizer
 
-**CAPM 기반 포트폴리오 최적화 (Sharpe Ratio 최대화)**  
+**Optimal Portfolio Allocation using CAPM & Modern Portfolio Theory**
 
-This project constructs an optimal portfolio under **Modern Portfolio Theory (MPT)** assumptions by estimating **expected returns** and the **covariance matrix**, then searching for the allocation that maximizes the **Sharpe ratio**.
-
-금융 데이터를 이용하여 **기대수익률과 공분산 구조를 추정하고**,  
-Sharpe Ratio를 기준으로 **최적 자산 배분(Optimal Portfolio)** 을 찾는 프로젝트입니다.
+> CAPM 기반 포트폴리오 최적화 프로젝트  
+> Sharpe Ratio를 최대화하는 **최적 자산 배분(Optimal Portfolio)** 을 찾습니다.
 
 ---
 
-# Motivation | 연구 동기
-
-Financial markets can be analyzed through **mathematics, probability, and statistical modeling**.  
-This project explores how **risk and return** can be quantified and optimized using classical portfolio theory.
-
-금융시장은 **수학적 모델링과 통계적 분석**을 통해 이해할 수 있습니다.  
-본 프로젝트는 **위험과 수익의 관계를 정량적으로 분석하고 최적 자산배분을 찾는 과정**을 탐구합니다.
+![Efficient Frontier](assets/efficient_frontier.png)
 
 ---
 
-# Optimization Problem | 최적화 문제
+# 📖 Overview | 프로젝트 개요
 
-We estimate expected returns and covariance matrix from asset return data and find portfolio weights that maximize the Sharpe ratio.
+This project explores how **mathematics, statistics, and programming** can be used to analyze financial markets.
 
-주어진 자산 수익률 데이터를 기반으로 **Sharpe Ratio를 최대화하는 포트폴리오 가중치**를 찾습니다.
+Using historical market data, we estimate **expected returns** and the **covariance matrix**, and construct an **optimal portfolio** that maximizes the **Sharpe ratio**.
 
-### Sharpe Ratio Maximization
+금융 데이터를 기반으로
+
+- 기대수익률
+- 공분산 행렬
+
+을 추정하고 **Sharpe Ratio를 최대화하는 포트폴리오**를 찾는 프로젝트입니다.
+
+---
+
+# 🎯 Optimization Problem | 최적화 문제
+
+We find portfolio weights that maximize the Sharpe ratio.
 
 <img src="https://latex.codecogs.com/svg.image?\max_{w}\;Sharpe(w)=\frac{E[R_p]-r_f}{\sigma_p}" />
 
@@ -37,22 +40,22 @@ where
 
 ---
 
-# Dataset | 데이터
+# 📂 Dataset
 
-Example configuration:
-
-- **Period:** historical market data  
-- **Assets:** selected stocks or indices  
-- **Frequency:** daily returns  
-- **Source:** Yahoo Finance (`yfinance`)  
+| Item | Description |
+|-----|-------------|
+| Source | Yahoo Finance |
+| Data | Historical market prices |
+| Frequency | Daily |
+| Processing | Converted into return series |
 
 가격 데이터를 수집한 뒤 **수익률 데이터로 변환하여 분석**합니다.
 
 ---
 
-# Methodology | 분석 방법
+# ⚙️ Methodology
 
-## Step 1 — Data Preprocessing
+## 1️⃣ Data Preprocessing
 
 - Download price data
 - Handle missing values
@@ -64,91 +67,104 @@ Example configuration:
 
 ---
 
-## Step 2 — Estimate Expected Return & Covariance
+## 2️⃣ Parameter Estimation
 
-- Expected return vector \( \mu \)  
-- Covariance matrix \( \Sigma \)
+- Expected return vector μ
+- Covariance matrix Σ
 
 자산 수익률의 평균과 공분산을 계산합니다.
 
 ---
 
-## Step 3 — Monte Carlo Portfolio Simulation
+## 3️⃣ Monte Carlo Simulation
 
-- Generate random portfolio weights  
-- Compute return, volatility, and Sharpe ratio  
-- Repeat simulation many times  
+Random portfolios are generated and evaluated.
 
 Example:
 
 N = 10000
 
-Monte Carlo 시뮬레이션을 통해 다양한 포트폴리오 조합을 생성합니다.
+각 포트폴리오에 대해
+
+- 기대수익률
+- 변동성
+- Sharpe Ratio
+
+를 계산합니다.
 
 ---
 
-## Step 4 — Select Optimal Portfolio
+## 4️⃣ Optimal Portfolio Selection
 
-The portfolio with the **highest Sharpe ratio** is selected as the optimal portfolio.
+The portfolio with the **maximum Sharpe ratio** is selected.
 
 Sharpe Ratio가 가장 높은 포트폴리오를 **최적 포트폴리오**로 선택합니다.
 
 ---
 
-# Results | 결과
+# 📈 Results
 
 ## Efficient Frontier
 
-The efficient frontier shows the relationship between **expected return and volatility**.
-
-위험(변동성)과 기대수익률 사이의 관계를 시각화합니다.
-
 ![Efficient Frontier](assets/efficient_frontier.png)
+
+위험과 기대수익률 사이의 관계를 나타냅니다.
 
 ---
 
 ## Capital Market Line
 
-The capital market line represents the optimal risk-return tradeoff.
-
 ![CML](assets/cml.png)
 
----
-
-# Interpretation | 해석
-
-The results illustrate that under CAPM/MPT assumptions, there exists a portfolio that maximizes **risk-adjusted return**.
-
-CAPM 가정 하에서는 **위험 대비 수익이 가장 효율적인 포트폴리오**가 존재하며  
-이는 Efficient Frontier 상의 **Tangency Portfolio**로 해석됩니다.
+위험 대비 수익이 가장 효율적인 포트폴리오를 보여줍니다.
 
 ---
 
-# Limitations | 한계
+# 📊 Example Optimal Portfolio
 
-- Strong CAPM assumptions  
-- Historical estimation bias  
-- Ignoring transaction costs  
+| Asset | Weight |
+|------|------|
+| Asset A | 0.xx |
+| Asset B | 0.xx |
+| Asset C | 0.xx |
 
-CAPM 모델과 과거 데이터 기반 추정에는 한계가 존재합니다.
+Example statistics
 
----
-
-# Future Work | 향후 연구
-
-Possible improvements:
-
-- Robust covariance estimation  
-- Black–Litterman model  
-- GARCH volatility modeling  
-- Transaction cost modeling  
-- Out-of-sample backtesting  
-
-보다 현실적인 포트폴리오 모델로 확장할 수 있습니다.
+- Max Sharpe Ratio: x.xx  
+- Expected Return: x.xx  
+- Volatility: x.xx  
 
 ---
 
-# How to Run
+# 🔬 Interpretation | 해석
+
+Under CAPM/MPT assumptions, there exists a portfolio that maximizes **risk-adjusted return**.
+
+이는 Efficient Frontier 상의 **Tangency Portfolio**로 해석할 수 있습니다.
+
+---
+
+# ⚠️ Limitations
+
+- CAPM strong assumptions
+- Historical estimation bias
+- Transaction costs not considered
+
+---
+
+# 🚀 Future Work
+
+Possible extensions:
+
+- Black–Litterman model
+- Robust covariance estimation
+- GARCH volatility modeling
+- Transaction cost modeling
+- Out-of-sample backtesting
+
+---
+
+# 💻 How to Run
 
 python -m venv .venv  
 source .venv/bin/activate  
@@ -157,17 +173,17 @@ jupyter notebook
 
 ---
 
-# Tech Stack
+# 🧰 Tech Stack
 
-- Python  
-- NumPy  
-- Pandas  
-- Matplotlib  
-- yfinance  
+Python  
+NumPy  
+Pandas  
+Matplotlib  
+yfinance  
 
 ---
 
-# Author
+# 👨‍💻 Author
 
 Financial Mathematics Student  
-Interested in **Quantitative Finance, Mathematical Modeling, and Systematic Trading**
+Interested in **Quantitative Finance · Mathematical Modeling · Systematic Trading**
