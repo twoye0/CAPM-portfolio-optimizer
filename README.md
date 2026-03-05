@@ -11,18 +11,28 @@
 
 ---
 
-# 📖 Overview | 프로젝트 개요
+## 📖 Overview | 프로젝트 개요
 
-This project explores how **mathematics, statistics, and programming** can be used to analyze financial markets.
+In financial markets, investors constantly face the trade-off between **risk and return**.  
+Modern Portfolio Theory (MPT) provides a mathematical framework to analyze this relationship and construct efficient portfolios.
 
-Using historical market data, we estimate **expected returns** and the **covariance matrix**, and construct an **optimal portfolio** that maximizes the **Sharpe ratio**.
+This project aims to implement a **portfolio optimization framework** based on CAPM/MPT principles.  
+By estimating **expected returns** and the **covariance structure** of asset returns, we search for the portfolio allocation that maximizes the **Sharpe ratio**, representing the best risk-adjusted return.
 
-금융 데이터를 기반으로
+Through this project, I explore how **mathematical modeling, statistical estimation, and programming** can be combined to better understand portfolio construction and systematic investment strategies.
 
-- 기대수익률
-- 공분산 행렬
+금융 시장에서는 항상 **위험과 수익 사이의 균형(trade-off)** 문제가 존재합니다.  
+Modern Portfolio Theory(MPT)는 이러한 관계를 **수학적으로 분석하고 효율적인 포트폴리오를 구성하는 방법**을 제공합니다.
 
-을 추정하고 **Sharpe Ratio를 최대화하는 포트폴리오**를 찾는 프로젝트입니다.
+본 프로젝트에서는 CAPM/MPT 기반 포트폴리오 이론을 구현하여
+
+- 자산 기대수익률 추정
+- 공분산 구조 분석
+- Sharpe Ratio 최대화
+
+를 통해 **위험 대비 수익이 가장 효율적인 포트폴리오를 탐색**합니다.
+
+이를 통해 **수학적 모델링, 통계적 분석, 그리고 프로그래밍이 금융 문제 해결에 어떻게 활용될 수 있는지** 탐구합니다.
 
 ---
 
