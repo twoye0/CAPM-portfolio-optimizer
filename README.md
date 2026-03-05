@@ -5,7 +5,7 @@
 This project constructs an optimal portfolio under **Modern Portfolio Theory (MPT)** assumptions by estimating **expected returns** and the **covariance matrix**, then searching for the allocation that maximizes the **Sharpe ratio**.
 
 금융 데이터를 이용하여 **기대수익률과 공분산 구조를 추정하고**,  
-Sharpe Ratio를 기준으로 **최적 자산 배분(Optimal Portfolio)**을 찾는 프로젝트입니다.
+Sharpe Ratio를 기준으로 **최적 자산 배분(Optimal Portfolio)** 을 찾는 프로젝트입니다.
 
 ---
 
