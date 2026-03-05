@@ -3,7 +3,7 @@
 **Optimal Portfolio Allocation using CAPM & Modern Portfolio Theory**
 
 > CAPM 기반 포트폴리오 최적화 프로젝트  
-> Sharpe Ratio를 최대화하는 **최적 자산 배분(Optimal Portfolio)**을 찾습니다.
+> Sharpe Ratio를 최대화하는 **최적 자산 배분(Optimal Portfolio)** 을 찾습니다.
 
 ---
 
