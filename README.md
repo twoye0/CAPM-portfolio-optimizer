@@ -5,7 +5,7 @@
 This project constructs an optimal portfolio under **CAPM / Modern Portfolio Theory (MPT)** assumptions by estimating **expected returns** and the **covariance matrix**, then searching for the allocation that maximizes the **Sharpe ratio**.
 
 금융 데이터를 이용하여 **기대수익률과 공분산 구조를 추정하고**,  
-Sharpe Ratio를 기준으로 **최적 자산 배분(Optimal Portfolio)**을 찾는 프로젝트입니다.
+Sharpe Ratio를 기준으로 **최적 자산 배분(Optimal Portfolio)** 을 찾는 프로젝트입니다.
 
 ---
 
@@ -164,7 +164,7 @@ Example statistics:
 The results illustrate that under CAPM/MPT assumptions, there exists a portfolio that maximizes **risk-adjusted return**.
 
 CAPM 및 MPT 가정 하에서는 **위험 대비 수익이 가장 효율적인 포트폴리오**가 존재하며,  
-이는 Efficient Frontier 상의 **최적 지점(Tangency Portfolio)**으로 해석됩니다.
+이는 Efficient Frontier 상의 **최적 지점(Tangency Portfolio)** 으로 해석됩니다.
 
 ---
 
